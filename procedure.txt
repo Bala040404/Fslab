@@ -1,0 +1,46 @@
+"Docker"
+
+docker --version (to check version)
+sudo snap install docker -installation
+
+create a flask application
+pip install flask
+create Dockerfile,app.py,requirements.txt
+
+sudo chmod 666 /var/run/docker/sock
+docker build -t flaskapp .
+docker run -d -p 5000:5000 flaskapp
+localhost:5000
+
+"SSH"
+ssh-keygen -t rsa -b 2048
+ssh-copy-id username@remote_ip_address
+ssh username@remote ip address
+bash script.sh
+
+
+"Jenkins"
+
+install war file
+sudo apt install openjdk-21-jdk -y
+sudo apt install javac (optional)
+sudo apt install git
+java -jar jenkins.war
+http://localhost:8080
+jenkins->newitem->Freestyle
+build steps ->excute shell (ubuntu)
+javac main.java
+java main
+
+
+"File transfer"
+ssh-keygen -t rsa -b 2048
+ssh-copy-id username@ip
+create a test.sh in remote system
+ssh username@ip 'bash ~/test.sh'
+
+To transfer file from remote to local:
+scp "username@ip":"filename_remote" "filename_local"
+
+To send file from local to remote:
+scp "filename_local" "username@ip":"filename_remote"
