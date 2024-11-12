@@ -7,7 +7,7 @@ create a flask application
 pip install flask
 create Dockerfile,app.py,requirements.txt
 
-sudo chmod 666 /var/run/docker/sock
+sudo chmod 666 /var/run/docker.sock
 docker build -t flaskapp .
 docker run -d -p 5000:5000 flaskapp
 localhost:5000
